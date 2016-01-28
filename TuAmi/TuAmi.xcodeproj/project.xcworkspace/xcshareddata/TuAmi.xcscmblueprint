@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0CC6835C9EDDFF00273586698175D877923D93E1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0CC6835C9EDDFF00273586698175D877923D93E1" : 0,
+    "C784098EC6A06A7EBF68EF4A36E05E58CC09434E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "719352CD-C742-477B-8FBA-FE954C9FB887",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0CC6835C9EDDFF00273586698175D877923D93E1" : "AmigoInvisible\/",
+    "C784098EC6A06A7EBF68EF4A36E05E58CC09434E" : "iOS-Swift-Sample-ToDo-\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TuAmi",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TuAmi\/TuAmi.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/davidmrtz\/AmigoInvisible.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0CC6835C9EDDFF00273586698175D877923D93E1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Batzee\/iOS-Swift-Sample-ToDo-.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C784098EC6A06A7EBF68EF4A36E05E58CC09434E"
+    }
+  ]
+}

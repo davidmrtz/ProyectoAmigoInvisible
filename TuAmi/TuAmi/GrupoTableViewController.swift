@@ -1,4 +1,5 @@
 
+
 import UIKit
 
 class GrupoTableViewController: UITableViewController {
@@ -18,7 +19,7 @@ class GrupoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -43,7 +44,7 @@ class GrupoTableViewController: UITableViewController {
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        
+       
         return toDoItems.count
         
     }
@@ -60,7 +61,7 @@ class GrupoTableViewController: UITableViewController {
         
         
         cell.textLabel?.text = todoItem.objectForKey("nombre") as? String
-        
+         
         return cell
         
     }
@@ -106,20 +107,20 @@ class GrupoTableViewController: UITableViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
         
         if(segue.identifier == "showDetails"){
-            
+        
             let indexPath:NSIndexPath = self.tableView.indexPathForSelectedRow!
             let detailViewController:DetailsViewController = segue.destinationViewController as! DetailsViewController
             
             detailViewController.todoData = toDoItems.objectAtIndex(indexPath.row) as! NSDictionary
-            
+           
         }
-            
+        
         else{
-            
+        
         }
         
     }

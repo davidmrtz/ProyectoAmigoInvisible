@@ -169,7 +169,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tu amigo invisible" id="DOj-Hn-vN7">
-                        <barButtonItem key="backBarButtonItem" title="Atrás" id="gXI-1Z-uXg"/>
+                        <barButtonItem key="backBarButtonItem" title="Atrás" id="wZC-YT-3gg"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N91-57-srE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -225,7 +225,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="MIS GRUPOS" id="nzb-AO-pN5">
-                        <barButtonItem key="backBarButtonItem" title="Atrás" id="wKe-E5-V3g"/>
+                        <barButtonItem key="backBarButtonItem" title="Atrás" id="QkE-hN-LBY"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ivK-Tg-TTZ">
                             <connections>
                                 <segue destination="OWX-zY-kty" kind="show" identifier="addTasKDetails" id="8kp-qV-SFu">
@@ -334,7 +334,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Añade un grupo" id="M7Z-lb-YLG">
-                        <barButtonItem key="backBarButtonItem" title="Atrás" id="URb-2L-14e"/>
+                        <barButtonItem key="backBarButtonItem" title="Atrás" id="MTj-As-Uvn"/>
                         <barButtonItem key="rightBarButtonItem" title="Hecho" id="EKq-yG-VAc">
                             <connections>
                                 <action selector="saveButtonClick:" destination="OWX-zY-kty" id="6zH-Gj-og6"/>
@@ -351,7 +351,7 @@
             </objects>
             <point key="canvasLocation" x="2713.5" y="657"/>
         </scene>
-        <!--Elimina un grupo-->
+        <!--Información del grupo-->
         <scene sceneID="6Rq-sr-Ulq">
             <objects>
                 <viewController id="Kuk-O2-kKw" customClass="DetailsViewController" customModule="TuAmi" customModuleProvider="target" sceneMemberID="viewController">
@@ -391,12 +391,6 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="NOMBRE DEL GRUPO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Div-JZ-sqn">
-                                <rect key="frame" x="49" y="150" width="71" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxh-K5-ofN">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.30319071079999999" blue="0.2539641856" alpha="1" colorSpace="calibratedRGB"/>
@@ -404,10 +398,16 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="¡¡SORTEAR!!"/>
                                 <connections>
-                                    <action selector="bottonSorteo:" destination="Kuk-O2-kKw" eventType="touchUpInside" id="Egg-0j-oOF"/>
-                                    <segue destination="pTq-3b-86O" kind="show" id="czQ-w3-w47"/>
+                                    <action selector="bottonSorteo:" destination="Kuk-O2-kKw" eventType="touchUpInside" id="wCJ-Cv-hgm"/>
+                                    <segue destination="Zv5-or-XVw" kind="show" identifier="Identer" id="LiI-sd-Aea"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="NOMBRE DEL GRUPO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Div-JZ-sqn">
+                                <rect key="frame" x="49" y="150" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -510,8 +510,8 @@
                         </variation>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Elimina un grupo" id="qlZ-Oo-gZB">
-                        <barButtonItem key="backBarButtonItem" title="Atrás" id="xTX-4q-vWy"/>
+                    <navigationItem key="navigationItem" title="Información del grupo" id="qlZ-Oo-gZB">
+                        <barButtonItem key="backBarButtonItem" title="Atrás" id="W36-85-HjD"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="x4H-ON-Ji8">
                             <connections>
                                 <action selector="deleteButtonClicked:" destination="Kuk-O2-kKw" id="3mO-Ha-cdi"/>
@@ -528,7 +528,7 @@
             </objects>
             <point key="canvasLocation" x="1935" y="1818"/>
         </scene>
-        <!--MIS PERSONAS-->
+        <!--PARTICIPANTES-->
         <scene sceneID="9uh-r1-F5y">
             <objects>
                 <tableViewController id="aR4-0i-Hua" customClass="PersonaTableViewController" customModule="TuAmi" customModuleProvider="target" sceneMemberID="viewController">
@@ -556,8 +556,8 @@
                             <outlet property="delegate" destination="aR4-0i-Hua" id="6ps-KK-bhl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="MIS PERSONAS" id="Ssl-r8-zhl">
-                        <barButtonItem key="backBarButtonItem" title="Atrás" id="QNX-wX-A2c"/>
+                    <navigationItem key="navigationItem" title="PARTICIPANTES" id="Ssl-r8-zhl">
+                        <barButtonItem key="backBarButtonItem" title="Atrás" id="zkD-pN-HlU"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8cJ-Gf-Qr1">
                             <connections>
                                 <segue destination="Fcv-hd-raQ" kind="show" identifier="addTasKDetails" id="0rh-Q2-O3R">
@@ -671,7 +671,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Añade un participante" id="tCU-UW-s54">
-                        <barButtonItem key="backBarButtonItem" title="Atrás" id="6fJ-HD-Ppq"/>
+                        <barButtonItem key="backBarButtonItem" title="Atrás" id="V2F-rZ-DcW"/>
                         <barButtonItem key="rightBarButtonItem" title="Hecho" id="83i-K8-249">
                             <connections>
                                 <action selector="saveButtonClick:" destination="Fcv-hd-raQ" id="Z6i-9g-vUT"/>
@@ -687,9 +687,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0AZ-NA-3hR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2661" y="2523"/>
+            <point key="canvasLocation" x="2628" y="2523"/>
         </scene>
-        <!--Elimina un participante-->
+        <!--Añade un participante-->
         <scene sceneID="zD2-nb-rE7">
             <objects>
                 <viewController id="dJQ-p7-dz6" customClass="DetailsPerViewController" customModule="TuAmi" customModuleProvider="target" sceneMemberID="viewController">
@@ -789,8 +789,7 @@
                         </variation>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Elimina un participante" id="GVn-9H-AK6">
-                        <barButtonItem key="backBarButtonItem" title="Atrás" id="Wj7-XK-hP5"/>
+                    <navigationItem key="navigationItem" title="Añade un participante" id="GVn-9H-AK6">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="xi7-4a-1hs">
                             <connections>
                                 <action selector="deleteButtonClicked:" destination="dJQ-p7-dz6" id="Xsv-oG-nWx"/>
@@ -807,68 +806,70 @@
             </objects>
             <point key="canvasLocation" x="1935" y="3290"/>
         </scene>
-        <!--MIS PERSONAS-->
-        <scene sceneID="nXj-gQ-hl8">
+        <!--RESULTADO DEL SORTEO-->
+        <scene sceneID="fYl-6T-B0u">
             <objects>
-                <tableViewController id="pTq-3b-86O" customClass="PersonaTableViewController" customModule="TuAmi" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="41T-nm-T47">
+                <tableViewController id="Zv5-or-XVw" customClass="PersonaTableViewController" customModule="TuAmi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7BT-47-QnF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellidPer" id="b2s-nA-CZ7">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellidPer" id="Yql-eE-LNV">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b2s-nA-CZ7" id="g0a-ZV-CJg">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yql-eE-LNV" id="L37-L8-ZQR">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="nWn-kc-s2L" kind="show" id="9B0-LO-D8w"/>
+                                    <segue destination="h0c-Gy-K1B" kind="show" identifier="SorteoDetails" id="K6l-kT-bya"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="pTq-3b-86O" id="nJn-I2-kLa"/>
-                            <outlet property="delegate" destination="pTq-3b-86O" id="THM-yM-Lzk"/>
+                            <outlet property="dataSource" destination="Zv5-or-XVw" id="xcv-hf-kVD"/>
+                            <outlet property="delegate" destination="Zv5-or-XVw" id="EIw-aF-ZBv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="MIS PERSONAS" id="x5V-Ia-dLk"/>
+                    <navigationItem key="navigationItem" title="RESULTADO DEL SORTEO" id="2uX-WI-YXW">
+                        <barButtonItem key="backBarButtonItem" title="Atrás" id="2ue-HB-IYc"/>
+                    </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1YY-M0-WrJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cul-aA-paf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2628" y="1818"/>
         </scene>
-        <!--Participante Sorteo-->
-        <scene sceneID="r1m-af-f13">
+        <!--Le ha tocado...-->
+        <scene sceneID="T1p-S6-OXF">
             <objects>
-                <viewController id="nWn-kc-s2L" customClass="PartSortViewController" customModule="TuAmi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="h0c-Gy-K1B" customClass="PartSortViewController" customModule="TuAmi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ONO-O9-ISZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="8Ej-2Y-fpJ"/>
+                        <viewControllerLayoutGuide type="top" id="aXs-uB-VDn"/>
+                        <viewControllerLayoutGuide type="bottom" id="XiC-Bh-aJg"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Sdi-SY-RrE">
+                    <view key="view" contentMode="scaleToFill" id="LgX-ue-ue2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="NOMBRE DEL PARTICIPANTE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yc8-qv-01a">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="NOMBRE DEL PARTICIPANTE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fA2-xt-X0b">
                                 <rect key="frame" x="49" y="150" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zl2-VE-HSn">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HU9-Pn-ycd">
                                 <rect key="frame" x="49" y="179" width="434" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="PREFERENCIAS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgA-BZ-UrQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="PREFERENCIAS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nv3-w5-yuc">
                                 <rect key="frame" x="49" y="234" width="88" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bhc-6B-KdT">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RxV-08-yus">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -877,76 +878,78 @@
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="zl2-VE-HSn" firstAttribute="trailing" secondItem="Sdi-SY-RrE" secondAttribute="trailingMargin" id="1FF-Yg-q2E"/>
-                            <constraint firstItem="zl2-VE-HSn" firstAttribute="top" secondItem="yc8-qv-01a" secondAttribute="bottom" constant="31" id="2RE-u5-VJu"/>
-                            <constraint firstItem="bhc-6B-KdT" firstAttribute="trailing" secondItem="Sdi-SY-RrE" secondAttribute="trailingMargin" id="Ejz-8U-rmc"/>
-                            <constraint firstItem="yc8-qv-01a" firstAttribute="trailing" secondItem="Sdi-SY-RrE" secondAttribute="trailingMargin" id="Fjh-5z-aNJ"/>
-                            <constraint firstItem="bhc-6B-KdT" firstAttribute="leading" secondItem="Sdi-SY-RrE" secondAttribute="leadingMargin" id="IGU-ta-exq"/>
-                            <constraint firstItem="bhc-6B-KdT" firstAttribute="top" secondItem="BgA-BZ-UrQ" secondAttribute="bottom" constant="13" id="Ia7-Ia-Jkw"/>
-                            <constraint firstItem="yc8-qv-01a" firstAttribute="leading" secondItem="Sdi-SY-RrE" secondAttribute="leadingMargin" id="JSG-et-tNa"/>
-                            <constraint firstItem="8Ej-2Y-fpJ" firstAttribute="top" secondItem="bhc-6B-KdT" secondAttribute="bottom" constant="65" id="Jdh-VM-4MV"/>
-                            <constraint firstItem="BgA-BZ-UrQ" firstAttribute="trailing" secondItem="Sdi-SY-RrE" secondAttribute="trailingMargin" id="Wif-sL-w1T"/>
-                            <constraint firstItem="zl2-VE-HSn" firstAttribute="leading" secondItem="Sdi-SY-RrE" secondAttribute="leadingMargin" id="bJP-0P-cvW"/>
-                            <constraint firstItem="bhc-6B-KdT" firstAttribute="top" secondItem="BgA-BZ-UrQ" secondAttribute="bottom" constant="13" id="gRq-RI-wrl"/>
-                            <constraint firstItem="yc8-qv-01a" firstAttribute="top" secondItem="ONO-O9-ISZ" secondAttribute="bottom" constant="36" id="iv0-sZ-YRU"/>
-                            <constraint firstItem="BgA-BZ-UrQ" firstAttribute="top" secondItem="zl2-VE-HSn" secondAttribute="bottom" constant="34" id="ntZ-F9-IEh"/>
-                            <constraint firstItem="BgA-BZ-UrQ" firstAttribute="top" secondItem="zl2-VE-HSn" secondAttribute="bottom" constant="34" id="p1I-7C-mOo"/>
-                            <constraint firstItem="BgA-BZ-UrQ" firstAttribute="leading" secondItem="Sdi-SY-RrE" secondAttribute="leadingMargin" id="qkK-cH-kUt"/>
+                            <constraint firstItem="RxV-08-yus" firstAttribute="leading" secondItem="LgX-ue-ue2" secondAttribute="leadingMargin" id="2v0-jE-2vJ"/>
+                            <constraint firstItem="nv3-w5-yuc" firstAttribute="top" secondItem="HU9-Pn-ycd" secondAttribute="bottom" constant="34" id="5dg-jc-7fk"/>
+                            <constraint firstItem="nv3-w5-yuc" firstAttribute="leading" secondItem="LgX-ue-ue2" secondAttribute="leadingMargin" id="75T-dl-P1h"/>
+                            <constraint firstItem="fA2-xt-X0b" firstAttribute="leading" secondItem="LgX-ue-ue2" secondAttribute="leadingMargin" id="At1-pR-Jtr"/>
+                            <constraint firstItem="nv3-w5-yuc" firstAttribute="trailing" secondItem="LgX-ue-ue2" secondAttribute="trailingMargin" id="BGw-EE-RnU"/>
+                            <constraint firstItem="RxV-08-yus" firstAttribute="trailing" secondItem="LgX-ue-ue2" secondAttribute="trailingMargin" id="BPy-wp-14X"/>
+                            <constraint firstItem="HU9-Pn-ycd" firstAttribute="trailing" secondItem="LgX-ue-ue2" secondAttribute="trailingMargin" id="Mnq-t5-2c1"/>
+                            <constraint firstItem="RxV-08-yus" firstAttribute="top" secondItem="nv3-w5-yuc" secondAttribute="bottom" constant="13" id="TXu-Nk-xW2"/>
+                            <constraint firstItem="HU9-Pn-ycd" firstAttribute="leading" secondItem="LgX-ue-ue2" secondAttribute="leadingMargin" id="WFw-zC-8h4"/>
+                            <constraint firstItem="XiC-Bh-aJg" firstAttribute="top" secondItem="RxV-08-yus" secondAttribute="bottom" constant="65" id="cZ7-dK-M6K"/>
+                            <constraint firstItem="fA2-xt-X0b" firstAttribute="top" secondItem="aXs-uB-VDn" secondAttribute="bottom" constant="36" id="hrC-fl-ys1"/>
+                            <constraint firstItem="fA2-xt-X0b" firstAttribute="trailing" secondItem="LgX-ue-ue2" secondAttribute="trailingMargin" id="kjn-tF-1zz"/>
+                            <constraint firstItem="RxV-08-yus" firstAttribute="top" secondItem="nv3-w5-yuc" secondAttribute="bottom" constant="13" id="pXp-0o-aNe"/>
+                            <constraint firstItem="nv3-w5-yuc" firstAttribute="top" secondItem="HU9-Pn-ycd" secondAttribute="bottom" constant="34" id="wtU-ie-rTg"/>
+                            <constraint firstItem="HU9-Pn-ycd" firstAttribute="top" secondItem="fA2-xt-X0b" secondAttribute="bottom" constant="31" id="zbh-yd-eFb"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="bhc-6B-KdT"/>
+                                <exclude reference="RxV-08-yus"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Ejz-8U-rmc"/>
-                                <exclude reference="IGU-ta-exq"/>
-                                <exclude reference="Ia7-Ia-Jkw"/>
-                                <exclude reference="gRq-RI-wrl"/>
-                                <exclude reference="Fjh-5z-aNJ"/>
-                                <exclude reference="JSG-et-tNa"/>
-                                <exclude reference="iv0-sZ-YRU"/>
-                                <exclude reference="1FF-Yg-q2E"/>
-                                <exclude reference="2RE-u5-VJu"/>
-                                <exclude reference="bJP-0P-cvW"/>
-                                <exclude reference="Wif-sL-w1T"/>
-                                <exclude reference="ntZ-F9-IEh"/>
-                                <exclude reference="p1I-7C-mOo"/>
-                                <exclude reference="qkK-cH-kUt"/>
-                                <exclude reference="Jdh-VM-4MV"/>
+                                <exclude reference="2v0-jE-2vJ"/>
+                                <exclude reference="BPy-wp-14X"/>
+                                <exclude reference="TXu-Nk-xW2"/>
+                                <exclude reference="pXp-0o-aNe"/>
+                                <exclude reference="At1-pR-Jtr"/>
+                                <exclude reference="hrC-fl-ys1"/>
+                                <exclude reference="kjn-tF-1zz"/>
+                                <exclude reference="Mnq-t5-2c1"/>
+                                <exclude reference="WFw-zC-8h4"/>
+                                <exclude reference="zbh-yd-eFb"/>
+                                <exclude reference="5dg-jc-7fk"/>
+                                <exclude reference="75T-dl-P1h"/>
+                                <exclude reference="BGw-EE-RnU"/>
+                                <exclude reference="wtU-ie-rTg"/>
+                                <exclude reference="cZ7-dK-M6K"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="bhc-6B-KdT"/>
+                                <include reference="RxV-08-yus"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Ejz-8U-rmc"/>
-                                <include reference="IGU-ta-exq"/>
-                                <include reference="Ia7-Ia-Jkw"/>
-                                <include reference="gRq-RI-wrl"/>
-                                <include reference="Fjh-5z-aNJ"/>
-                                <include reference="JSG-et-tNa"/>
-                                <include reference="iv0-sZ-YRU"/>
-                                <include reference="1FF-Yg-q2E"/>
-                                <include reference="2RE-u5-VJu"/>
-                                <include reference="bJP-0P-cvW"/>
-                                <include reference="Wif-sL-w1T"/>
-                                <include reference="ntZ-F9-IEh"/>
-                                <include reference="p1I-7C-mOo"/>
-                                <include reference="qkK-cH-kUt"/>
-                                <include reference="Jdh-VM-4MV"/>
+                                <include reference="2v0-jE-2vJ"/>
+                                <include reference="BPy-wp-14X"/>
+                                <include reference="TXu-Nk-xW2"/>
+                                <include reference="pXp-0o-aNe"/>
+                                <include reference="At1-pR-Jtr"/>
+                                <include reference="hrC-fl-ys1"/>
+                                <include reference="kjn-tF-1zz"/>
+                                <include reference="Mnq-t5-2c1"/>
+                                <include reference="WFw-zC-8h4"/>
+                                <include reference="zbh-yd-eFb"/>
+                                <include reference="5dg-jc-7fk"/>
+                                <include reference="75T-dl-P1h"/>
+                                <include reference="BGw-EE-RnU"/>
+                                <include reference="wtU-ie-rTg"/>
+                                <include reference="cZ7-dK-M6K"/>
                             </mask>
                         </variation>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Participante Sorteo" id="dno-zD-WLD"/>
+                    <navigationItem key="navigationItem" title="Le ha tocado..." id="9cb-2j-g9A">
+                        <barButtonItem key="backBarButtonItem" title="Atrás" id="f0m-JE-RBT"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="descriptionTextField" destination="bhc-6B-KdT" id="RNu-P1-K0h"/>
-                        <outlet property="titleTextField" destination="zl2-VE-HSn" id="cax-Fs-qlY"/>
+                        <outlet property="descriptionTextField" destination="RxV-08-yus" id="TRO-5K-kvo"/>
+                        <outlet property="titleTextField" destination="HU9-Pn-ycd" id="RjV-iy-oKc"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5C6-I5-hhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="muc-UK-cEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3319.5" y="1818"/>
         </scene>
@@ -956,6 +959,6 @@
         <image name="logo.png" width="1250" height="1250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aTc-ZB-Koi"/>
+        <segue reference="8kp-qV-SFu"/>
     </inferredMetricsTieBreakers>
 </document>

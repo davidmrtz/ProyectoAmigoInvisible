@@ -12,7 +12,6 @@
 		5F50AF701C2344A1005C7F1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F50AF6E1C2344A1005C7F1A /* Main.storyboard */; };
 		5F50AF721C2344A1005C7F1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F50AF711C2344A1005C7F1A /* Assets.xcassets */; };
 		5F50AF751C2344A1005C7F1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F50AF731C2344A1005C7F1A /* LaunchScreen.storyboard */; };
-		5FE4A9B51C5AB35500F7FE5B /* PartSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE4A9B41C5AB35500F7FE5B /* PartSortViewController.swift */; };
 		5FF2CC9C1C3EF32B000DA3C1 /* AddPerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2CC961C3EF32B000DA3C1 /* AddPerViewController.swift */; };
 		5FF2CC9D1C3EF32B000DA3C1 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2CC971C3EF32B000DA3C1 /* AddViewController.swift */; };
 		5FF2CC9E1C3EF32B000DA3C1 /* DetailsPerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2CC981C3EF32B000DA3C1 /* DetailsPerViewController.swift */; };
@@ -24,6 +23,7 @@
 		7BE69ECE1C245C34006EACDA /* imagen-regalo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BE69ECD1C245C34006EACDA /* imagen-regalo.png */; };
 		7BE69ED21C2460DF006EACDA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BE69ED11C2460DF006EACDA /* logo.png */; };
 		7BE69ED41C2468B9006EACDA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE69ED31C2468B9006EACDA /* MenuViewController.swift */; };
+		F6EE223A1C5A993600D0DB92 /* PartSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EE22391C5A993600D0DB92 /* PartSortViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,6 @@
 		5F50AF711C2344A1005C7F1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F50AF741C2344A1005C7F1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F50AF761C2344A1005C7F1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5FE4A9B41C5AB35500F7FE5B /* PartSortViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartSortViewController.swift; sourceTree = "<group>"; };
 		5FF2CC961C3EF32B000DA3C1 /* AddPerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPerViewController.swift; sourceTree = "<group>"; };
 		5FF2CC971C3EF32B000DA3C1 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		5FF2CC981C3EF32B000DA3C1 /* DetailsPerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsPerViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		7BE69ECD1C245C34006EACDA /* imagen-regalo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "imagen-regalo.png"; path = "Imágenes/imagen-regalo.png"; sourceTree = "<group>"; };
 		7BE69ED11C2460DF006EACDA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = "Imágenes/logo.png"; sourceTree = "<group>"; };
 		7BE69ED31C2468B9006EACDA /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F6EE22391C5A993600D0DB92 /* PartSortViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartSortViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,7 @@
 				5F50AF6C1C2344A1005C7F1A /* ViewController.swift */,
 				7BE69ED31C2468B9006EACDA /* MenuViewController.swift */,
 				7B4BCFE41C25844900B14D34 /* CrearGrupoViewController.swift */,
-				5FE4A9B41C5AB35500F7FE5B /* PartSortViewController.swift */,
+				F6EE22391C5A993600D0DB92 /* PartSortViewController.swift */,
 				5F50AF6E1C2344A1005C7F1A /* Main.storyboard */,
 				7BE69ECB1C245B92006EACDA /* Imágenes */,
 				5F50AF711C2344A1005C7F1A /* Assets.xcassets */,
@@ -182,7 +182,7 @@
 				5FF2CCA01C3EF32B000DA3C1 /* GrupoTableViewController.swift in Sources */,
 				5FF2CC9E1C3EF32B000DA3C1 /* DetailsPerViewController.swift in Sources */,
 				7BE69ED41C2468B9006EACDA /* MenuViewController.swift in Sources */,
-				5FE4A9B51C5AB35500F7FE5B /* PartSortViewController.swift in Sources */,
+				F6EE223A1C5A993600D0DB92 /* PartSortViewController.swift in Sources */,
 				5FF2CC9F1C3EF32B000DA3C1 /* DetailsViewController.swift in Sources */,
 				7B4BCFE51C25844900B14D34 /* CrearGrupoViewController.swift in Sources */,
 				5F50AF6B1C2344A1005C7F1A /* AppDelegate.swift in Sources */,

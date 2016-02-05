@@ -35,21 +35,37 @@ class DetailsPerViewController: UIViewController {
         
         
         
-        let userDefault:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        let itemListArray:NSMutableArray = userDefault.objectForKey(nombrearray3) as! NSMutableArray
+        let alert=UIAlertController(title: "¡Aviso!", message: "¿Borrar este participante?", preferredStyle: UIAlertControllerStyle.Alert);
         
-        let mutableItemList: NSMutableArray = NSMutableArray()
         
-        for dict:AnyObject in itemListArray{
-            mutableItemList.addObject(dict as! NSDictionary)
-        }
+        alert.addAction(UIAlertAction(title: "Sí", style: UIAlertActionStyle.Default, handler: {(action:UIAlertAction) in
+            
+            let userDefault:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+            let itemListArray:NSMutableArray = userDefault.objectForKey(self.nombrearray3) as! NSMutableArray
+            
+            let mutableItemList: NSMutableArray = NSMutableArray()
+            
+            for dict:AnyObject in itemListArray{
+                mutableItemList.addObject(dict as! NSDictionary)
+            }
+            
+            mutableItemList.removeObject(self.todoData)
+            userDefault.removeObjectForKey(self.nombrearray3)
+            userDefault.setObject(mutableItemList, forKey: self.nombrearray3)
+            userDefault.synchronize()
+            
+            self.navigationController?.popViewControllerAnimated(true)
+            
+        }));
+        //no event handler (just close dialog box)
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Cancel, handler: nil));
+        //event handler with closure
         
-        mutableItemList.removeObject(todoData)
-        userDefault.removeObjectForKey(nombrearray3)
-        userDefault.setObject(mutableItemList, forKey: nombrearray3)
-        userDefault.synchronize()
+        presentViewController(alert, animated: true, completion: nil);
         
-        self.navigationController?.popViewControllerAnimated(true)
+        
+        
+
     }
     
   

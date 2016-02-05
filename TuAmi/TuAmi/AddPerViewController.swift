@@ -9,6 +9,10 @@ class AddPerViewController: UIViewController {
     
     @IBOutlet weak var button: UIBarButtonItem!
  
+    @IBOutlet weak var nombreText: UITextField!
+    
+    @IBOutlet weak var PreferenciasText: UITextView!
+    
     var nombrearray2 = String()
 
     override func viewDidLoad() {
@@ -20,26 +24,12 @@ class AddPerViewController: UIViewController {
         }
        
         // Do any additional setup after loading the view.
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
     }
     
-    
-    func keyboardWillShow(sender: NSNotification) {
-        //self.view.frame.origin.y -= 190
-    }
-    
-    func keyboardWillHide(sender: NSNotification) {
-        //self.view.frame.origin.y = 0
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
     
     @IBAction func saveButtonClick(sender: AnyObject) {
     
@@ -47,7 +37,6 @@ class AddPerViewController: UIViewController {
         let userdefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults();
         
         var itemList:NSMutableArray? = userdefaults.objectForKey(nombrearray2) as?NSMutableArray
-        
         if (tastTitle.text == ""){
             let alertController = UIAlertController(title: "¡Aviso!", message:
                 "Introduce el nombre del participante", preferredStyle: UIAlertControllerStyle.Alert)
@@ -55,10 +44,13 @@ class AddPerViewController: UIViewController {
             
             self.presentViewController(alertController, animated: true, completion: nil)
         } else {
+            
+            let dataSet:NSMutableDictionary = NSMutableDictionary()
+            dataSet.setObject(tastTitle.text!, forKey: "nombre")
+            dataSet.setObject(taskDetails.text!, forKey: "preferencias")
         
-        let dataSet:NSMutableDictionary = NSMutableDictionary()
-        dataSet.setObject(tastTitle.text!, forKey: "nombre")
-        dataSet.setObject(taskDetails.text!, forKey: "preferencias")
+        
+        
         
         if((itemList) != nil){
             
@@ -83,14 +75,11 @@ class AddPerViewController: UIViewController {
         userdefaults.synchronize()
         self.navigationController?.popViewControllerAnimated(true)
     }
+        
     }
-    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         tastTitle.resignFirstResponder()
         taskDetails.resignFirstResponder()
     }
-    
-    
-
     
 }

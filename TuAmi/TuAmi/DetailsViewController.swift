@@ -26,38 +26,39 @@ extension MutableCollectionType where Index == Int {
     }
 }
 
+
 class DetailsViewController: UIViewController {
     
     var nombreArray = String()
-    var toDoItems:NSMutableArray = NSMutableArray()
-    var numbers:[Int] = []
-    var array:[Int] = []
+    
+    
     var n :Int = 0
     var todoData:NSDictionary = NSDictionary()
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextView!
-    
+   
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+    
         titleTextField.userInteractionEnabled=false
-        descriptionTextField.userInteractionEnabled=false
+        descriptionTextField.userInteractionEnabled=true
+        
         
         titleTextField.text=todoData.objectForKey("nombre") as? String
-        
-        
+
         descriptionTextField.text=todoData.objectForKey("importemaximo") as? String
-        
+       
         
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        
-    }
+        let DestViewController : PersonaTableViewController = segue.destinationViewController as! PersonaTableViewController
+        DestViewController.nombreArray = titleTextField.text!
+        }
     
     
     override func didReceiveMemoryWarning() {
@@ -68,41 +69,73 @@ class DetailsViewController: UIViewController {
     @IBAction func deleteButtonClicked(sender: AnyObject) {
         
         
+        let alert=UIAlertController(title: "¡Aviso!", message: "¿De verdad quieres borrar el grupo?", preferredStyle: UIAlertControllerStyle.Alert);
+        //default input textField (no configuration...)
         
-        let userDefault:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        let itemListArray:NSMutableArray = userDefault.objectForKey("ListaGrupos") as! NSMutableArray
+        alert.addAction(UIAlertAction(title: "Sí", style: UIAlertActionStyle.Default, handler: {(action:UIAlertAction) in
+            
+            let userDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+            var toDoItemList:NSMutableArray? = userDefaults.objectForKey(self.titleTextField.text!) as? NSMutableArray
+            toDoItemList=NSMutableArray()
+            toDoItemList?.removeAllObjects()
+            userDefaults.setObject(toDoItemList, forKey:self.titleTextField.text!)
+            userDefaults.synchronize()
+            
+            let userDefault:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+            let itemListArray:NSMutableArray = userDefault.objectForKey("ListaGrupos") as! NSMutableArray
+            
+            let mutableItemList: NSMutableArray = NSMutableArray()
+            
+            for dict:AnyObject in itemListArray{
+                mutableItemList.addObject(dict as! NSDictionary)
+            }
+            
+            mutableItemList.removeObject(self.todoData)
+            userDefault.removeObjectForKey("ListaGrupos")
+            userDefault.setObject(mutableItemList, forKey:"ListaGrupos")
+            userDefault.synchronize()
+            
+            self.navigationController?.popViewControllerAnimated(true)
+            
+        }));
+        //no event handler (just close dialog box)
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Cancel, handler: nil));
+        //event handler with closure
         
-        let mutableItemList: NSMutableArray = NSMutableArray()
+        presentViewController(alert, animated: true, completion: nil);
+
         
-        for dict:AnyObject in itemListArray{
-            mutableItemList.addObject(dict as! NSDictionary)
-        }
         
-        mutableItemList.removeObject(todoData)
-        userDefault.removeObjectForKey("ListaGrupos")
-        userDefault.setObject(mutableItemList, forKey:"ListaGrupos")
-        userDefault.synchronize()
-        
-        self.navigationController?.popViewControllerAnimated(true)
     }
-    
-    override func viewDidAppear(animated: Bool) {
-        let userDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        let toDoItemList:NSMutableArray? = userDefaults.objectForKey(nombreArray) as? NSMutableArray
-        
-        if (toDoItemList != nil) {
-            toDoItems=toDoItemList!
-        }
-    }
-    
+
+   
+
     @IBAction func bottonSorteo(sender: AnyObject) {
         
-        for i in 0...toDoItems.count - 1
-        {
-            array.append(i)
+        var numbers:[Int] = []
+        var array:[Int] = []
+        
+        let userDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        let toDoItemList:NSMutableArray? = userDefaults.objectForKey(titleTextField.text!) as? NSMutableArray
+
+        
+        let userDefaultsSorteo: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+      
+        if (toDoItemList?.count < 3){
+            let alertController = UIAlertController(title: "¡Aviso!", message:
+                "Introduce como mínimo 3 participantes", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Vale", style: UIAlertActionStyle.Default,handler: nil))
             
+            self.presentViewController(alertController, animated: true, completion: nil)
         }
-        for i in 0...toDoItems.count - 1 {
+        else{
+        
+       for i in 0...toDoItemList!.count - 1
+       {
+            array.append(i)
+          
+        }
+        for i in 0...toDoItemList!.count - 1 {
             numbers.append(i)
             
         }
@@ -117,12 +150,29 @@ class DetailsViewController: UIViewController {
                 }else{ n = n + 1
                 }
             }
-            
+            if (n == 0){
+            n = 1
+            }
         }while(numbers[n-1] == array[n-1])
         
         print(array)
         print(numbers)
         
+        
+        let newMutableList: NSMutableArray = NSMutableArray()
+        
+        for i in 0...numbers.count - 1 {
+            newMutableList.addObject(toDoItemList![numbers[i]])
+            userDefaultsSorteo.setObject(newMutableList, forKey: "Sorteo")
+      
+            }
+            
+        }
+        
     }
+    
+    
+    
+    
+    
 }
-
